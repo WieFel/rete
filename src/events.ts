@@ -47,7 +47,8 @@ export class EditorEvents extends Events {
             import: [],
             export: [],
             process: [],
-            clear: []
+            clear: [],
+            reset: [],
         });
     }    
 }
@@ -134,4 +135,5 @@ export interface EventsTypes extends DefaultEventsTypes {
     export: Data;
     process: void;
     clear: void;
+    reset: void;
 }
