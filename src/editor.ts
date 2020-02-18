@@ -115,7 +115,10 @@ export class NodeEditor extends Context<EventsTypes> {
     reset() {
         this.nodes = [];
         this.components = new Map();
-        this.view = new EditorView(this.container, this.components, this);
+        this.view.components = this.components;
+        this.view.area.el.innerHTML = '';
+        this.view.area.transform = { k: 1, x: 0, y: 0 };
+        this.view.area.mouse = { x: 0, y: 0 };
         this.trigger('reset');
     }
 
