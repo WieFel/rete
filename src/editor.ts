@@ -118,7 +118,7 @@ export class NodeEditor extends Context<EventsTypes> {
         this.view.components = this.components;
         const divs = this.view.area.el.childNodes;
 
-        for (let i = 2; i < divs.length; i++)
+        for (let i = divs.length - 1; i >= 2; i--)
             this.view.area.el.removeChild(divs.item(i));
 
         this.view.area.transform = { k: 1, x: 0, y: 0 };
