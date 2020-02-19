@@ -116,7 +116,11 @@ export class NodeEditor extends Context<EventsTypes> {
         this.nodes = [];
         this.components = new Map();
         this.view.components = this.components;
-        this.view.area.el.innerHTML = '';
+        const divs = this.view.area.el.childNodes;
+
+        for (let i = 2; i < divs.length; i++)
+            this.view.area.el.removeChild(divs.item(i));
+
         this.view.area.transform = { k: 1, x: 0, y: 0 };
         this.view.area.mouse = { x: 0, y: 0 };
         this.trigger('reset');
