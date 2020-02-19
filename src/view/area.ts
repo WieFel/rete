@@ -106,4 +106,15 @@ export class Area extends Emitter<EventsTypes> {
     removeChild(el: HTMLElement) {
         this.el.removeChild(el)
     }
+
+    reset() {
+        const divs = this.el.childNodes;
+
+        for (let i = divs.length - 1; i >= 2; i--)
+            this.el.removeChild(divs.item(i));
+
+        this.transform = { k: 1, x: 0, y: 0 };
+        this.mouse = { x: 0, y: 0 };
+        this.update();
+    }
 }
