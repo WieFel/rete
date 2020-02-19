@@ -112,9 +112,10 @@ export class NodeEditor extends Context<EventsTypes> {
         this.trigger('clear');
     }
 
-    reset() {
+    reset(resetComponents: boolean = true) {
+        if (resetComponents)
+            this.components = new Map();
         this.nodes = [];
-        this.components = new Map();
         this.view.components = this.components;
         const divs = this.view.area.el.childNodes;
 
