@@ -1,3 +1,7 @@
+# What this fork adds
+This fork adds an `editor.reset()` function in order to be able to clear the editor and reset it to its initial state.
+
+
 Rete.js  [![Build Status](https://travis-ci.org/retejs/rete.svg?branch=master)](https://travis-ci.org/retejs/rete) 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=retejs_rete&metric=alert_status)](https://sonarcloud.io/dashboard?id=retejs_rete)
 [![Join the chat at https://gitter.im/retejs/Lobby](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/retejs/Lobby)
